@@ -1,0 +1,9 @@
+*.sw?
+*.iml
+*.jar
+*.DS_Store
+.idea/
+.classpath
+.project
+.settings
+target/
