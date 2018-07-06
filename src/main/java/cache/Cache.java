@@ -7,9 +7,6 @@ import java.util.*;
  * Abstract cache class
  */
 public abstract class Cache<KeyType, ValueType> {
-
-    private KeyType currentElementKey = null;
-
     /**
      * Insert object to cache
      * @param key - Object key
