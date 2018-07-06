@@ -1,5 +1,6 @@
 package cache;
 
+import java.lang.reflect.ParameterizedType;
 import java.util.*;
 
 /**
@@ -72,6 +73,15 @@ public abstract class Cache<KeyType, ValueType> {
         if(!this.keySet().equals(objectToCompareWith.keySet())) {
             return false;
         }
+
+        if((((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0]) != (((ParameterizedType) objectToCompareWith.getClass().getGenericSuperclass()).getActualTypeArguments()[0])) {
+            return false;
+        }
+
+        if((((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[1]) != (((ParameterizedType) objectToCompareWith.getClass().getGenericSuperclass()).getActualTypeArguments()[1])) {
+            return false;
+        }
+
         for (KeyType key: this.keySet()) {
             if(!this.get(key).equals(objectToCompareWith.get(key))) {
                 return false;

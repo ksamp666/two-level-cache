@@ -13,7 +13,7 @@ import static junit.framework.TestCase.fail;
 import static utils.fileutils.FileSystem.deleteFolder;
 
 public abstract class BaseJUnitTest {
-    protected static final String TESTS_FOLDER = RESOURSES_FOLDER_PATH+"tests"+ File.separator;
+    protected static final String TESTS_FOLDER = RESOURSES_FOLDER_PATH + "tests" + File.separator;
     protected static final String CACHE_FILES_FOLDER = TESTS_FOLDER + "cache" + File.separator;
 
     @AfterAll
