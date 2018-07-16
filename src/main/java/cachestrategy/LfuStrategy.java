@@ -6,12 +6,12 @@ import java.util.*;
  */
 public class LfuStrategy<KeyType> implements Strategy<KeyType> {
 
-    private LinkedList<KeyType> elements = new LinkedList<>();
+    private ArrayList<KeyType> elements = new ArrayList<>();
     private Map<KeyType, Integer> elementsUses = new HashMap<>();
 
     @Override
     public KeyType getReplacingKey() {
-        return elements.getFirst();
+        return elements.get(0);
     }
 
     @Override
